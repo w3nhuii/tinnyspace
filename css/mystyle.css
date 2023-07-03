@@ -1,0 +1,117 @@
+.promotion_slide {
+    max-width: 100%;
+    padding-left:200px;
+    padding-right:200px;
+    position: relative;
+    margin: auto;
+	margin-top: 100px;
+}
+
+.line {
+    height: 3px;
+    width: 80px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-width:0;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: grey;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 2px 4px 4px 2px;
+    user-select: none;
+}
+
+.next {
+    right: 140px;
+    border-radius: 4px 2px 2px 4px;
+}
+
+.prev {
+    left:140px;
+}
+
+.categories{
+    width:100%; 
+    text-align:center; 
+    vertical-align:middle;
+    display: inline; 
+    margin:auto;
+	
+}
+
+.categories h4{
+    font-size: medium; 
+    float:left; 
+    display: inline; 
+    width:25%; 
+    padding-right: 20px;
+}
+
+
+
+.categories a:link{
+    
+    text-align:center;
+    color:#333333;
+    text-decoration: none;
+    font-family: Dubai;
+
+}
+
+form.example{
+    margin:auto;
+    padding-left: 50px;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    
+    
+    float: left;
+    width: 30%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    color: black;
+    font-size: 17px;
+    border: 1px solid lightgray;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+ 
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  
+.sale_banner {
+    background-color:rgb(230,227,227); 
+    font-family: Dubai;
+    padding:5px 0 5px 75px;
+    height:55px;
+    color:rgb(51,51,51);
+}

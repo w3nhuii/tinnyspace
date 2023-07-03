@@ -1,0 +1,149 @@
+*{
+	 font-family: 'Lato', sans-serif;
+}
+
+
+nav .log-out{
+	display: flex;
+	position: absolute;
+	right: 5vw;
+	top: 3%;
+	transform: translateY(-50%);
+}
+
+.admin-header{
+	text-align:center;
+}
+
+.panels-container {
+  background-color : #D7D7D7;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.icon {
+	position : absolute;
+	top : -20px;
+	left : 10px;
+	width: 20%;
+	height: 100%;
+}
+
+.add-class-container{
+	margin-top:20px;
+}
+
+.add-class{
+	font-size: 17px;
+	font-weight: 600;
+	color: darkgoldenrod;
+	padding: 12px;
+	opacity: 0.5;
+	transition: 1s;
+	text-decoration: none;
+	border-bottom: .1px solid black;
+	margin-top: 200px;
+	padding-bottom:5px;
+	padding-right: 20px;
+	margin-left:10px;
+	text-align:center;
+}
+
+.add-class:hover{
+	opacity:1;
+}
+
+.index-table-content a{
+	font-size: 20px;
+	text-decoration: none;
+	border:1px solid lightgrey;
+	border-radius: 6px;
+	padding: 5px;
+	background-color: green;
+	opacity: 0.5;
+	color:white;
+	margin-right: 6px;
+	transition: 0.5s;
+	
+}
+
+
+.index-table-content a:hover{
+	opacity:1;	
+}
+
+.index-table-content .header-row {
+	background-color:#D2B48C;
+	color: white;
+}
+
+.data-row:nth-child(even) {background-color: white;}
+.data-row:nth-child(odd) {background-color: rgb(222,184,135,0.2); }
+
+.add-body{
+	background: url(../img/furniture.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+.form-box{
+	border: 1px solid black;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 25px;
+	background-color: #D7D7D7;
+	color: white;
+	
+}
+
+.table-content{
+	padding: 30px;
+	
+}
+
+.admin-title{
+	text-align:center;
+	padding-bottom:20px;
+	border-bottom: 1px solid white;
+	border-radius: 5px;
+	
+	
+}
+
+.table-content input[type=text], input[type=number]{
+	border-radius: 25px;
+	display:inline block;
+	width:100%;
+	padding: 6px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid lightgrey;
+}
+
+.table-content input[type=file]{
+	padding: 6px;
+	margin: 8px 0;
+	cursor: pointer;
+}
+
+.table-content input[type=submit]{
+	font-size: 20px;
+	color: black;
+	background-color: Bisque;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 4px;
+	border: .1px solid black;
+	text-align: center;
+	float: right;
+}
+
+.table-content input[type=submit]:hover{
+	background-color: #ffe8cc;
+}

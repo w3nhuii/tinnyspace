@@ -1,0 +1,141 @@
+<?php
+
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <?php include('includes/header.php'); ?>
+        <br>
+        <br>
+    <style>
+        
+        * {box-sizing: border-box;}
+        .promo {display: none;}
+        img {vertical-align: middle;}
+    </style>
+       
+    </head>
+
+    <body>
+        <div class="promotion_slide">
+
+            <div class="promo">
+                <img src="../img/promoslide1.png" style="width:100%; height:100%">
+            </div>
+
+            <div class="promo">
+                <img src="../img/promoslide2.jpg" style="width:100%; height:100%">
+            </div>
+
+            <div class="promo">
+                <img src="../img/promoslide3.png" style="width:100%; height:100%">
+            </div>
+
+            <a class="prev" onclick="controlSlides(-1)">&#10094;</a>
+            <a class="next" onclick="controlSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="line"></span> 
+            <span class="line"></span> 
+            <span class="line"></span> 
+        </div>
+      
+
+        <script>
+            var timer = null;
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function controlSlides(n) {
+                clearInterval(timer)
+                if (n < 0){
+                    showSlides(slideIndex -= 1);
+                } 
+                else {
+                    showSlides(slideIndex += 1); 
+                }
+                if (n === -1){
+                    timer = setInterval(function(){controlSlides(n + 2)}, 4000);
+                } 
+                else {
+                    timer = setInterval(function(){controlSlides(n + 1)}, 4000);
+                }
+
+            }
+
+            function currentSlide(n){
+                clearInterval(timer)
+                timer = setInterval(function(){controlSlides(n + 1)}, 4000);
+                showSlides(slideIndex = n)
+            }
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("promo");
+                let lines = document.getElementsByClassName("line");
+
+                if (n == undefined) {
+                    n = ++slideIndex;
+                }
+
+               
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+              
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }    
+                for (i = 0; i < lines.length; i++) {
+                    lines[i].className = lines[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                lines[slideIndex-1].className += " active";
+                
+            }
+
+            window.addEventListener("load",function() {
+                showSlides(slideIndex);
+                timer = setInterval(function(){controlSlides(1)}, 4000);
+            })
+        </script>
+
+        <div class="categories" style="color:blue;">
+			<?php
+				echo'<h4><a href="product.php?category=livingroom" alt="Living Room" >LIVING ROOM</a></h4>';
+				echo'<h4><a href="product.php?category=diningroom" alt="Dining Room">DINING ROOM</a></h4>';
+				echo'<h4><a href="product.php?category=bathroom" alt="Bathroom">BATHROOM</a></h4>';
+				echo'<h4><a href="product.php?category=bedroom" alt="Bedroom">BEDROOM</a></h4>';
+			?>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <form action="searchProcess.php" class="searchbar" method="post" style="margin:auto; padding-left:90px ;max-width:500px">
+            <input type="text" placeholder="" name="search" style="width:300px" required/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <br>
+		<h1 class="sale_banner" >SALE</h1>
+        <br>
+        <div class="product_box">
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer>
+			<?php include('includes/footer.php'); ?>
+		</footer>
+        <script src="../js/product.js"></script>
+    </body>
+</html>

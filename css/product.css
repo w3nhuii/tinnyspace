@@ -1,0 +1,196 @@
+:root{
+    --brown:#D2B48C;
+}
+
+body *{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+	scroll-behavior: smooth;
+	list-style: none;
+}
+
+
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+}
+
+
+.heading{
+	padding-top: 70px;
+	width: 95%;
+	border-bottom: .2rem solid black;
+	margin: 0 auto;
+	font-size:30px;
+	padding-bottom: 7px;
+	font-family: 'Lato', sans-serif;
+}
+
+.heading span{
+	font-size: 32px;
+	padding-left: 1rem;
+	color: var(--brown);
+	border-top-right-radius: 3rem;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+
+.product{
+	min-height: 100vh;
+}
+
+.box-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 2rem 0;
+	width: 85%;
+	margin: 0 auto;
+	padding-bottom:2.5rem;
+}
+
+.box{
+	flex: 1 1 30rem;
+	border: .1rem solid black;
+	overflow: hidden;
+	position: relative;
+	margin: 20px 32px;
+	
+}
+
+.image{
+	
+	height: 27rem;
+	padding: 10px;
+	text-align: center;
+	background: #f0f0f0;
+	
+}
+
+.image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.info h3{
+	margin-top: -10px;
+	font-weight: 600;
+	padding:1rem;
+	font-size: 3rem;
+	color: var(--brown);
+	 
+}
+
+.info{
+	height: 100px;
+	font-family: 'Lato', sans-serif;
+}
+
+.subinfo{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:1rem;
+	border-top: 100px dotted black;
+	font-family: 'Lato', sans-serif;
+}
+
+.price{
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	padding-bottom: 20px;
+	margin: 10px;
+	font-weight: 600;
+	
+}
+
+
+.overlay{
+	position: absolute;
+	top:0;
+	left: 0;
+	height:27rem;
+	width: 100%;
+	background: rgba(128,128,128,0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: 0.5s;
+}
+
+
+.overlay i{
+	font-size: 2rem;
+	padding: 1.5rem 2rem;
+	background: black;
+	color: white;
+	margin: 1rem;
+	transition-delay: calc(.1s * var(--count));
+	opacity:0;
+	cursor: pointer;
+}
+
+.box:hover .overlay {
+	transform: scale(1);
+}
+
+.box:hover .overlay i{
+	opacity: 1;
+}
+
+
+.product .box-container .box .overlay i:hover{
+	color:purple;
+	transition: 1s;
+}
+
+
+form.example{
+    margin:auto;
+    padding-left: 50px;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 30%;
+    background: #f1f1f1;
+}
+
+form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	color: black;
+	font-size: 17px;
+	border: 1px solid lightgray;
+	border-left: none;
+	cursor: pointer;
+}
+
+
+
+form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.all-container{
+	position: relative;
+	min-height: 100vh;
+}
+
+#footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height: 20px;
+	
+}
